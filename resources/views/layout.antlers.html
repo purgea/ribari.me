@@ -14,19 +14,19 @@
                     {{ if site:handle == 'sr' }}Direktorat za ribarstvo Crne Gore{{ else }}Directorate of Fisheries of Montenegro{{ /if }}
                 </a>
 
-                <!-- Right-side Content (Date & Language Switcher) -->
                 <div class="flex items-center space-x-6">
                     <p class="text-gray-200">{{ now format="d.m.Y" }}</p>
                 
-                    <!-- Language Switcher -->
                     <div class="flex items-center space-x-2">
                         <a href="/" class="px-4 py-2 text-sm rounded-md 
                             {{ if site:handle == 'sr' }}bg-blue-700{{ else }}hover:bg-blue-700{{ /if }}">
-                            🇲🇪
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Montenegro.svg" 
+                            alt="Crnogorski" class="w-10 h-5">
                         </a>
                         <a href="/en" class="px-4 py-2 text-sm rounded-md 
                             {{ if site:handle == 'en' }}bg-blue-700{{ else }}hover:bg-blue-700{{ /if }}">
-                            🇬🇧
+                            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" 
+                            alt="English" class="w-10 h-5">
                         </a>
                     </div>
                 </div>

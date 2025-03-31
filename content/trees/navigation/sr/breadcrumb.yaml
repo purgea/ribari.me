@@ -1,0 +1,25 @@
+tree:
+  -
+    id: 0c86a18d-7e98-4d13-9865-3da4f5fcfee8
+    title: Home
+    url: /
+  -
+    id: f5ece86f-b0cc-4923-9587-284e1e6e2e3e
+    title: 'Zakoni i propisi'
+    url: /zakoni-i-propisi
+  -
+    id: 32ada9b4-196e-4c83-9756-74c4f555fb8b
+    title: Projekti
+    url: /projekti
+  -
+    id: f5c7a219-8372-43db-a70c-5982f8291329
+    title: Novosti
+    url: /novosti
+  -
+    id: 4c0ff484-e2c8-44b0-b8e1-a256c2ee347b
+    title: Luke
+    url: /luke
+  -
+    id: 0f3a3f47-9a2c-4df3-b8fb-735541b9535d
+    title: Kontakt
+    url: /kontakt

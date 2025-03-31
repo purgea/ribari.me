@@ -1,0 +1,30 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              placeholder: 'Enter your name...'
+              character_limit: 255
+              type: text
+              display: Name
+              localizable: false
+          -
+            handle: email
+            field:
+              input_type: email
+              placeholder: 'Enter your email address...'
+              character_limit: 255
+              type: text
+              display: Email
+              localizable: false
+          -
+            handle: message
+            field:
+              placeholder: 'Enter message here...'
+              type: text
+              display: Message
+              localizable: false

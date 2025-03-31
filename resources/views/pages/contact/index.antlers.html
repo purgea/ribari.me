@@ -1,0 +1,85 @@
+<div class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-center mb-10">
+        {{ if site:handle == 'sr' }}Kontakt{{ else }}Contact{{ /if }}
+    </h1>  
+
+    <div class="bg-white shadow-lg rounded-lg p-8 space-y-6">
+        {{ contact_details }}
+            
+            <!-- Phone -->
+            <div class="flex items-center space-x-4">
+                <div class="bg-blue-600 text-white p-3 rounded-full">
+                    📞
+                </div>
+                <div>
+                    <h2 class="text-xl font-semibold">
+                        {{ if site:handle == 'sr' }}Telefon{{ else }}Phone{{ /if }}
+                    </h2>
+                    <p class="text-gray-700">{{ phone }}</p>
+                </div>
+            </div>
+
+            <!-- Fax -->
+            <div class="flex items-center space-x-4">
+                <div class="bg-blue-600 text-white p-3 rounded-full">
+                    📠
+                </div>
+                <div>
+                    <h2 class="text-xl font-semibold">
+                        Fax
+                    </h2>
+                    <p class="text-gray-700">{{ fax }}</p>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-center space-x-4">
+                <div class="bg-blue-600 text-white p-3 rounded-full">
+                    ✉️
+                </div>
+                <div>
+                    <h2 class="text-xl font-semibold">
+                        Email
+                    </h2>
+                    <p class="text-gray-700">
+                        <a href="mailto:{{ email }}" class="text-blue-600 hover:underline">{{ email }}</a>
+                    </p>
+                </div>
+            </div>
+
+        {{ /contact_details }}
+    </div>
+
+    <div class="mt-12">
+        <h2 class="text-3xl font-bold text-center">
+            {{ if site:handle == 'sr' }}Kontaktirajte nas{{ else }}Contact Us{{ /if }}
+        </h2>
+        <p class="text-center text-gray-600">
+            {{ if site:handle == 'sr' }}Imate pitanja? Kontaktirajte nas!{{ else }}Have questions? Get in touch!{{ /if }}
+        </p>
+    
+        {{ form:contact_us class="bg-white p-6 rounded-lg shadow-md mt-6" }}
+            {{ if success }}
+                <div class="bg-green-500 text-white p-4 rounded-md text-center">{{ success }}</div>
+            {{ else }}
+                {{ if errors }}
+                    <div class="bg-red-500 text-white p-4 rounded-md">{{ errors }}</div>
+                {{ /if }}
+    
+                {{ fields }}
+                    <div class="mt-4">
+                        <label class="block text-gray-700 font-medium">{{ display }}</label>
+                        {{ field | replace('<input', '<input class="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"') }}
+                        {{ if error }}
+                            <p class="text-red-600 text-sm mt-1">{{ error }}</p>
+                        {{ /if }}
+                    </div>
+                {{ /fields }}
+    
+                <button type="submit" class="w-full bg-blue-600 text-white hover:cursor-pointer font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 mt-4">
+                    {{ if site:handle == 'sr' }}Pošalji{{ else }}Submit{{ /if }}
+                </button>
+            {{ /if }}
+        {{ /form:contact_us }}
+    </div>
+</div>

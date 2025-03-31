@@ -1,15 +1,62 @@
-<!doctype html>
-<html lang="{{ site:short_locale }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title ?? site:name }}</title>
-        {{ vite src="resources/js/site.js|resources/css/site.css" }}
-    </head>
-    <body class="bg-slate-100 dark:bg-gray-800 font-sans leading-normal text-slate-800 dark:text-gray-400">
-        <div class="mx-auto px-2 lg:min-h-screen flex flex-col items-center justify-center">
+<!DOCTYPE html>
+<html lang="{{ if site:handle == 'sr' }}sr{{ else }}en{{ /if }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    {{ vite src="resources/js/site.js|resources/css/site.css" }}
+</head>
+<body class="min-h-screen bg-gray-100 text-gray-900 flex flex-col">
+    <div class="flex-grow">
+        <header class="bg-blue-900 text-white py-6 shadow-md">
+            <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
+                <a href="{{ if site:handle == 'sr' }}/{{ else }}/en{{ /if }}" class="text-2xl font-bold uppercase">
+                    {{ if site:handle == 'sr' }}Direktorat za ribarstvo Crne Gore{{ else }}Directorate of Fisheries of Montenegro{{ /if }}
+                </a>
+
+                <!-- Right-side Content (Date & Language Switcher) -->
+                <div class="flex items-center space-x-6">
+                    <p class="text-gray-200">{{ now format="d.m.Y" }}</p>
+                
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-2">
+                        <a href="/" class="px-4 py-2 text-sm rounded-md 
+                            {{ if site:handle == 'sr' }}bg-blue-700{{ else }}hover:bg-blue-700{{ /if }}">
+                            🇲🇪
+                        </a>
+                        <a href="/en" class="px-4 py-2 text-sm rounded-md 
+                            {{ if site:handle == 'en' }}bg-blue-700{{ else }}hover:bg-blue-700{{ /if }}">
+                            🇬🇧
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+
+        <nav class="bg-blue-800 text-white">
+            <div class="max-w-6xl mx-auto px-6 py-4 flex space-x-4">
+                {{ nav:breadcrumb }}
+                    <a href="{{ url }}" class="px-4 py-2 rounded-md hover:bg-blue-700">{{ title }}</a>
+                {{ /nav:breadcrumb }}
+            </div>
+        </nav>
+
+        <main class="max-w-6xl mx-auto px-6 pb-8">
             {{ template_content }}
-        </div>
-    </body>
+        </main>
+    </div>
+
+    <footer class="bg-blue-900 text-white text-center py-6 mt-auto">
+        <p>&copy; {{ now format="Y" }} {{ site_details:site_name }} | 
+           {{ if site:handle == 'sr' }}Sva prava zadržana.{{ else }}All rights reserved.{{ /if }}
+        </p>
+        <p>
+            {{ if site:handle == 'sr' }}Kontakt:{{ else }}Contact:{{ /if }} {{ site_details:contact_email }}
+        </p>
+        <p class="mt-2">
+            {{ if site:handle == 'sr' }}Ministarstvo poljoprivrede, šumarstva i vodoprivrede - Direktorat za ribarstvo{{ else }}Ministry of Agriculture, Forestry, and Water Management - Directorate of Fisheries{{ /if }}
+        </p>
+    </footer>
+</body>
 </html>

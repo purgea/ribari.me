@@ -1,17 +1,20 @@
-title: Pages
+title: Ports
 sites:
   - sr
   - en
 propagate: false
-template: pages/show
+template: ports/show
 layout: layout
 revisions: false
-route: '{parent_uri}/{slug}'
+route:
+  sr: '/luke/{slug}'
+  en: '/ports/{slug}'
 sort_dir: asc
+date_behavior:
+  past: public
+  future: private
 preview_targets:
   -
     label: Entry
     url: '{permalink}'
     refresh: true
-structure:
-  root: true

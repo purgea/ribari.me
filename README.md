@@ -21,7 +21,7 @@ php artisan migrate
 
 # 5. Set Up Statamic  
 php artisan statamic:install  #not entirely sure about the necessity of this command
-php artisan make:user  
+php please make:user  
 
 # 6. Install Frontend Dependencies  
 npm install  

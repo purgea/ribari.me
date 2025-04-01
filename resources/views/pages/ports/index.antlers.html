@@ -20,7 +20,7 @@
             <div class="p-6">
                 <h2 class="text-2xl font-bold">{{ title }}</h2>
                 <div class="mt-4 flex justify-between items-center">
-                    <span class="text-sm text-gray-500">{{ date format="d.m.Y" }}</span>
+                    <span class="text-sm text-gray-500">{{ if site:handle == 'sr' }} Radno vrijeme: {{ work_hours}} {{ else }} Work Hours: {{ work_hours}}{{ /if }}</span>
                     <a href="{{ if site:handle == 'sr' }}/luke/{{ slug }}{{ else }}/en/ports/{{ slug }}{{ /if }}" 
                        class="text-blue-600 hover:underline">
                         {{ if site:handle == 'sr' }}Pročitaj više{{ else }}Read More{{ /if }}

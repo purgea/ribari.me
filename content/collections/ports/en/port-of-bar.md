@@ -4,5 +4,6 @@ blueprint: port
 title: 'Port of Bar'
 image: luka_bar_1_030323_tw1024.jpg
 updated_by: 3dffcb88-1dab-4c56-bb8a-d6d7594b4f4b
-updated_at: 1743351918
+updated_at: 1743489090
+work_hours: '06:00 - 22:00'
 ---

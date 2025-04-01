@@ -12,6 +12,7 @@ tabs:
               required: true
               validate:
                 - required
+              localizable: false
           -
             handle: content
             field:
@@ -26,6 +27,13 @@ tabs:
               container: assets
               type: assets
               display: Image
+              localizable: false
+          -
+            handle: work_hours
+            field:
+              type: text
+              display: 'Work hours'
+              localizable: false
   sidebar:
     display: Sidebar
     sections:

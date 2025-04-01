@@ -4,5 +4,6 @@ blueprint: port
 title: 'Port of Zelenika'
 image: luka-zelenika.jpg
 updated_by: 3dffcb88-1dab-4c56-bb8a-d6d7594b4f4b
-updated_at: 1743351890
+updated_at: 1743489111
+work_hours: '10:00 - 18:00'
 ---

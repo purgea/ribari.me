@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e78c37312101617be2e6bf96617e293",
+    "content-hash": "07952751c3f9dcd728063b8837945e57",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -2646,6 +2646,70 @@
                 "source": "https://github.com/michelf/php-smartypants/tree/1.8.1"
             },
             "time": "2016-12-13T01:01:17+00:00"
+        },
+        {
+            "name": "mitydigital/statamic-logger",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mitydigital/statamic-logger.git",
+                "reference": "4bde55bf20c28032f130258e04e55ae909f0a5b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mitydigital/statamic-logger/zipball/4bde55bf20c28032f130258e04e55ae909f0a5b3",
+                "reference": "4bde55bf20c28032f130258e04e55ae909f0a5b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2",
+                "statamic/cms": "^5.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.10",
+                "orchestra/testbench": "^8.5",
+                "pestphp/pest": "^2.9",
+                "pestphp/pest-plugin-laravel": "^2.1",
+                "spatie/pest-plugin-test-time": "^2.0",
+                "spatie/x-ray": "^1.1"
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MityDigital\\StatamicLogger\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "Logger for Statamic",
+                    "description": "Detailed, customisable and human-friendly logging for Statamic."
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MityDigital\\StatamicLogger\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marty Friedel"
+                }
+            ],
+            "description": "Detailed, customisable and human-friendly logging for Statamic.",
+            "keywords": [
+                "log",
+                "logging",
+                "statamic"
+            ],
+            "support": {
+                "issues": "https://github.com/mitydigital/statamic-logger/issues",
+                "source": "https://github.com/mitydigital/statamic-logger/tree/2.4.0"
+            },
+            "time": "2024-11-14T00:01:36+00:00"
         },
         {
             "name": "monolog/monolog",

@@ -2,7 +2,6 @@
     <div class="p-6">
         <h2 class="text-2xl font-bold">{{ title }}</h2>
 
-        <!-- Table of Contents -->
         <div class="max-w-md my-6">
             <div class="text-2xl font-bold">Sadržaj</div>
             <div class="py-4 text-base text-gray-700 sm:text-lg">
@@ -10,18 +9,12 @@
                     {{ toc field="content" depth="3" }}
                         <li>
                             <a class="font-bold text-cyan-800" href="#{{ toc_id }}">{{ toc_title }}</a>
-                            {{ if children }}
-                                <ol>
-                                    {{ *recursive children* }}
-                                </ol>
-                            {{ /if }}
                         </li>
                     {{ /toc }}
                 </ol>
             </div>
         </div>
 
-        <!-- Content -->
         <div class="prose max-w-none">
             {{ content | toc }}
         </div>

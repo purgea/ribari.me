@@ -1,0 +1,19 @@
+<section class="max-w-5xl mx-auto py-6 px-6">
+    <h1 class="text-3xl font-bold text-gray-800 mb-8">Kategorija: Generalno</h1>
+
+    <div class="grid gap-8">
+        {{ collection:news taxonomy:categories="generalno" }}
+            <article class="bg-white shadow rounded-lg p-6 transition hover:shadow-lg border border-gray-100">
+                <h2 class="text-2xl font-semibold text-blue-600 hover:underline">
+                    <a href="{{ url }}">{{ title }}</a>
+                </h2>
+                <p class="mt-2 text-gray-700">{{ summary }}</p>
+                <div class="mt-4">
+                    <a href="{{ url }}" class="inline-block text-sm text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">
+                        Pročitaj više
+                    </a>
+                </div>
+            </article>
+        {{ /collection:news }}
+    </div>
+</section>

@@ -5,6 +5,8 @@ sites:
 propagate: false
 template: news/show
 layout: layout
+taxonomies:
+  - categories
 revisions: false
 route:
   sr: '/novosti/{slug}'

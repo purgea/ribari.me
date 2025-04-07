@@ -21,6 +21,30 @@ tabs:
               type: bard
               display: Content
               localizable: false
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - h1
+                - underline
+                - strikethrough
+                - small
+                - superscript
+                - subscript
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              antlers: true
           -
             handle: author
             field:
@@ -49,3 +73,12 @@ tabs:
               localizable: false
               validate:
                 - required
+          -
+            handle: categories
+            field:
+              type: terms
+              taxonomies:
+                - categories
+              display: Categories
+              mode: select
+              localizable: false
